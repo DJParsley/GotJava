@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
 /**
  * @author Murray, Devan, Cerrell
  *
@@ -15,7 +14,7 @@ public class GotJava {
 private JMenuItem item1 = new JMenuItem("Login");
 private JMenuItem item2 = new JMenuItem("About");
 private String aboutFiller1 = "Created by Devan Parsley";
-private String aboutFiller2 = "Murray Sloan";
+private String aboutFiller2 = "Murray Sloan Jr.";
 private String aboutFiller3 = "and Cerrell Brown";
 private String aboutFiller4 = "Go Team GotJava!";
 	
@@ -42,7 +41,8 @@ private String aboutFiller4 = "Go Team GotJava!";
 		panel.add( title );
 		
 		// Sets the properties of the searchbox and adds it to the panel.
-		searchBox.setSize(200, 50);
+		searchBox.setSize( 200, 50 );
+		searchBox.setLocation( 0 , 50 );
 		panel.add( searchBox );
 		
 		// TextField is super small and not usable.
@@ -110,8 +110,6 @@ g.drawString(aboutFiller4, 85, 80);
 };
 aboutFrame.setSize(600, 365);
 aboutFrame.setResizable(false);
-
-JPanel aboutPanel = new JPanel();
 
 aboutPanel.setLayout(null);
 aboutPanel.setBackground(Color.WHITE);
