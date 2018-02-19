@@ -108,6 +108,10 @@ g.setFont( new Font("Times New Roman", Font.BOLD, 16));
 g.drawString(aboutFiller4, 85, 80);
 }
 };
+aboutFrame.setSize(600, 365);
+aboutFrame.setResizable(false);
+
+JPanel aboutPanel = new JPanel();
 
 aboutPanel.setLayout(null);
 aboutPanel.setBackground(Color.WHITE);
