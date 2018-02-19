@@ -21,31 +21,40 @@ private String aboutFiller4 = "Go Team GotJava!";
 	public GotJava() {
 		
 		JFrame frame = new JFrame("");
-                JMenuBar menubar = new JMenuBar();
-                JMenu menu1 = new JMenu("Admin");
-                JMenu menu2 = new JMenu("Help");
-                menu1.add(item1);
-                menu2.add(item2);
-                menubar.add(menu1);
-                menubar.add(menu2);
-                frame.setJMenuBar(menubar);
+        JMenuBar menubar = new JMenuBar();
+        JMenu menu1 = new JMenu("Admin");
+        JMenu menu2 = new JMenu("Help");
+        
+        // Adds the Admin and Help menus to the menubar, then adds
+        // the menubar to the frame.
+        menu1.add(item1);
+        menu2.add(item2);
+        menubar.add(menu1);
+        menubar.add(menu2);
+        frame.setJMenuBar(menubar);
+        
 		JPanel panel = new JPanel();
-		JLabel title = new JLabel();
-		JTextField searchBox = new JTextField();
 		
+		// Sets the background color and layout style of the panel.
 		panel.setBackground( Color.WHITE );
+		panel.setLayout( new BoxLayout ( panel, BoxLayout.PAGE_AXIS ) );
+		
+		JLabel title = new JLabel();
 		
 		// Sets the properties of the title and adds it to the panel.
 		title.setFont( new Font( "Serif", Font.BOLD, 32 ) );
 		title.setText( "GotJava Search Engine" );
 		panel.add( title );
 		
+		JTextField searchBox = new JTextField( 30 );
+		
 		// Sets the properties of the searchbox and adds it to the panel.
-		searchBox.setSize( 200, 50 );
-		searchBox.setLocation( 0 , 50 );
+		searchBox.setSize( 50, 20 ); // Not changing the size currently
 		panel.add( searchBox );
 		
-		// TextField is super small and not usable.
+		JButton search = new JButton( "Search" );
+		
+		panel.add( search );
 		
 		// Sets the properties of the frame, including title, size, default
 		// close operation, and default location. Adds the panel to the frame.
