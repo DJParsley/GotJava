@@ -1,11 +1,7 @@
 package gj_package;
 
-// Import statements. Will attempt to implement the wildcard function to trim the fat.
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JTextField;
+import javax.swing.*;
+import java.awt.*;
 
 
 /**
@@ -13,28 +9,44 @@ import javax.swing.JTextField;
  *
  */
 
-public class GotJava extends JFrame {
+public class GotJava {
 	
-	JPanel window = new JPanel();
-	JLabel title = new JLabel();
-	JTextField searchBox = new JTextField( 30 );
-	
-	public GotJava(){
+	public GotJava() {
 		
-		setTitle( "GotJava Search Engine" );
-		setSize( 600, 400 );
-		setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		setLocationRelativeTo( null );
-		setResizable( false );
-		add( title );
-		add( searchBox );
-		setVisible( true );
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JLabel title = new JLabel();
+		JTextField searchBox = new JTextField();
+		
+		panel.setBackground( Color.WHITE );
+		
+		// Sets the properties of the title and adds it to the panel.
+		title.setFont( new Font( "Serif", Font.BOLD, 32 ) );
+		title.setText( "GotJava Search Engine" );
+		panel.add( title );
+		
+		// Sets the properties of the searchbox and adds it to the panel.
+		searchBox.setSize(200, 50);
+		panel.add( searchBox );
+		
+		// TextField is super small and not usable.
+		
+		// Sets the properties of the frame, including title, size, default
+		// close operation, and default location. Adds the panel to the frame.
+		frame.add( panel );
+		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		frame.add( panel );
+		frame.setTitle( "GotJava Search Engine" );
+		frame.pack();
+		frame.setLocationRelativeTo( null );
+		frame.setResizable( false );		
+		frame.setVisible( true );
 		
 	}
 	
 	public static void main( String[] args ) {
 		
-		GotJava gj = new GotJava();
+		new GotJava();
 		
 	}
 	
