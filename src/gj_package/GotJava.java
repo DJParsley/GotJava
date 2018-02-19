@@ -33,20 +33,20 @@ private String aboutFiller4 = "Go Team GotJava!";
         menubar.add(menu2);
         frame.setJMenuBar(menubar);
         
-		JPanel panel = new JPanel();
+        JPanel panel = new JPanel();
 		
-		// Sets the background color and layout style of the panel.
-		panel.setBackground( Color.WHITE );
-		panel.setLayout( new BoxLayout ( panel, BoxLayout.PAGE_AXIS ) );
+        // Sets the background color and layout style of the panel.
+        panel.setBackground( Color.WHITE );
+        panel.setLayout( new BoxLayout ( panel, BoxLayout.PAGE_AXIS ) );
 		
-		JLabel title = new JLabel();
+        JLabel title = new JLabel();
 		
-		// Sets the properties of the title and adds it to the panel.
-		title.setFont( new Font( "Serif", Font.BOLD, 32 ) );
-		title.setText( "GotJava Search Engine" );
-		panel.add( title );
+        // Sets the properties of the title and adds it to the panel.
+        title.setFont( new Font( "Serif", Font.BOLD, 32 ) );
+        title.setText( "GotJava Search Engine" );
+        panel.add( title );
 		
-		JTextField searchBox = new JTextField( 30 );
+        JTextField searchBox = new JTextField( 30 );
 		
 		// Sets the properties of the searchbox and adds it to the panel.
 		searchBox.setSize( 50, 20 ); // Not changing the size currently
