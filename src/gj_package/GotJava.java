@@ -33,28 +33,36 @@ public class GotJava {
         menubar.add(menu2);
         frame.setJMenuBar(menubar);
         
-        JPanel panel = new JPanel();
+        JPanel panel = new JPanel ( new GridBagLayout() );
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets( 5, 5, 5, 5 );
 		
         // Sets the background color and layout style of the panel.
         panel.setBackground( Color.WHITE );
-        panel.setLayout( new BoxLayout ( panel, BoxLayout.PAGE_AXIS ) );
 		
         JLabel title = new JLabel();
 		
         // Sets the properties of the title and adds it to the panel.
-        title.setFont( new Font( "Serif", Font.BOLD, 32 ) );
+        title.setFont( new Font( "Serif", Font.BOLD, 24 ) );
         title.setText( "GotJava Search Engine" );
-        panel.add( title );
+        c.gridx = 1;
+        c.gridy = 0;
+        panel.add( title, c );
 		
-        JTextField searchBox = new JTextField( 30 );
+        JTextField searchBox = new JTextField();
 		
 		// Sets the properties of the searchbox and adds it to the panel.
-		searchBox.setSize( 50, 20 ); // Not changing the size currently
-		panel.add( searchBox );
+		searchBox.setPreferredSize( new Dimension ( 200, 20 ) );
+		c.gridx = 1;
+        c.gridy = 2;
+		panel.add( searchBox, c );
 		
 		JButton search = new JButton( "Search" );
 		
-		panel.add( search );
+		// Sets the properties of the search button and adds it to the panel.
+		c.gridx = 1;
+        c.gridy = 4;
+		panel.add( search, c );
 		
 		// Sets the properties of the frame, including title, size, default
 		// close operation, and default location. Adds the panel to the frame.
